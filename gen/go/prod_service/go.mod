@@ -1,4 +1,4 @@
-module github.com/production-service-contracts/gen/go/prod_service
+module github.com/Inf85/production-service-contracts/gen/go/prod_service
 
 go 1.19
 
