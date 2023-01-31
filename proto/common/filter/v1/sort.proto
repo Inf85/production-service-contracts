@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package common.sort.v1;
+
+option go_package = "e-commerce/gen/go/prod/products/v1;pb_prod_products";
+
+message Sort{
+  string field = 1;
+}

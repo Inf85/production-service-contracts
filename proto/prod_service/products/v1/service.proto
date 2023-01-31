@@ -1,0 +1,41 @@
+syntax = "proto3";
+import "common/filter/v1/filter.proto";
+import "prod_service/products/v1/product.proto";
+
+package prod.products.v1;
+
+option go_package = "e-commerce/gen/go/common/filter/v1;pb_common_filter";
+
+
+service ProductService {
+  rpc CreateProduct(CreateProductRequest) returns (CreateProductResponse){}
+  rpc AllProducts(AllProductsRequest) returns (AllProductsResponse){}
+}
+
+message CreateProductRequest{
+  string name = 1;
+  string description = 2;
+  string image_id = 3;
+  string price = 4;
+  uint32  raiting = 5;
+  uint32  currency_id = 6;
+  string category_id = 7;
+  string specification = 8;
+
+}
+message CreateProductResponse{
+  Product product = 1;
+}
+
+message AllProductsRequest{
+  common.filter.v1.Pagination pagination = 1;
+  common.filter.v1.StringFieldFilter name = 2;
+  common.filter.v1.StringFieldFilter description = 3;
+  common.filter.v1.IntFieldFilter price = 4;
+  common.filter.v1.IntFieldFilter rating = 5;
+  common.filter.v1.StringFieldFilter categoty_id = 6;
+}
+
+message AllProductsResponse{
+  repeated Product products = 1;
+}
