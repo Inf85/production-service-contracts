@@ -4,7 +4,7 @@ import "prod_service/products/v1/product.proto";
 
 package prod.products.v1;
 
-option go_package = "e-commerce/gen/go/common/filter/v1;pb_common_filter";
+option go_package = "github.com/Inf85/production-service-contracts/gen/go/common/filter/v1;pb_common_filter";
 
 
 service ProductService {

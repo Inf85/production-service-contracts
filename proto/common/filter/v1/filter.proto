@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package common.filter.v1;
 
-option go_package = "e-commerce/gen/go/common/filter/v1;pb_common_filter";
+option go_package = "github.com/Inf85/production-service-contracts/gen/go/common/filter/v1;pb_common_filter";
 
 message Pagination{
   uint64 limit = 1;
