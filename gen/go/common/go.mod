@@ -1,4 +1,4 @@
-module github.com/Inf85/production-service-contracts/gen/go/common
+module github.com/production-service-contracts/gen/go/common
 
 go 1.19
 
